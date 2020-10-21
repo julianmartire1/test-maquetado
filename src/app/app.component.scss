@@ -1,0 +1,40 @@
+.app {
+    &__layout {
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        margin-top: 40px;
+    }
+
+    &__type-product {
+        font-size: 24px;
+        font-weight: bold;
+        color: #030B1C;
+        margin: 0px 0px 7px;
+    }
+
+    &__filters {
+        width: 25%;
+    }
+
+    &__products {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .app {
+        &__layout {
+            width: 95%;
+            margin-top: 0;
+        }
+        &__filters {
+            display: none;
+        }
+
+        &__products {
+            width: 100%;
+        }
+    }
+}

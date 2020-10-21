@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    &__layout {
+        background-color: #24182b;
+        width: 100%;
+        height: 100px;
+        flex-direction: column;
+        box-sizing: border-box;
+        place-content: center space-evenly;
+        align-items: center;
+        box-shadow: 0px 3px 6px #00000026;
+        position: relative;
+    }
+
+    &__logo-icons {
+        flex-direction: row;
+        box-sizing: border-box;
+        place-content: center;
+        align-items: center;
+    }
+
+    &__bars {
+        display: none;
+    }
+
+    &__logo {
+        height: 30px;
+        width: auto;
+        cursor: pointer;
+    }
+
+    &__icons {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    &__icon {
+        margin-left: 10px;
+        height: 23px;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #3e3046;
+        }
+    }
+
+    &__links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__link {
+        padding: 0 2.5%;
+        font-size: 20px;
+        color: #fafafa;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        text-decoration: none;
+
+        &--bold {
+            font-weight: bold;
+        }
+
+        &:hover {
+            background-color: #3e3046;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .header {
+        &__logo {
+            height: 25px;
+        }
+
+        &__icon {
+            height: 17px;
+        }
+
+        &__link {
+            font-size: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        &__layout {
+            height: 70px;
+        }
+
+        &__logo-icons {
+            position: initial;
+            width: 100%;
+            place-content: center space-between;
+            padding: 0 15px;
+        }
+
+        &__logo {
+            height: 20px;
+        }
+
+        &__bars {
+            display: flex;
+            width: 25px;
+        }
+
+        &__icons {
+            position: initial;
+            float: right;
+            width: 25px;
+        }
+
+        &__icon:not(:last-child) {
+            display: none;
+        }
+
+        &__icon:last-child {
+            padding-left: 0;
+            width: 25px;
+            height: auto;
+        }
+
+        &__links {
+            display: none;
+        }
+    }
+}
