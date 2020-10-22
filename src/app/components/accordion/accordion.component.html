@@ -1,0 +1,5 @@
+<h3 class="accordion accordion__subtitle" (click)="showContent = !showContent">{{items.title}}
+    <span>{{showContent ? '-' : '+'}}</span></h3>
+<div class="accordion accordion__content" [ngClass]="{'accordion__content--open': showContent}">
+    <div *ngFor="let item of items.items" class="accordion accordion__item">{{item}}</div>
+</div>

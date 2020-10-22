@@ -1,12 +1,17 @@
 <div class="header header__layout">
     <div class="header header__logo-icons">
-        <img class="header header__bars" src="assets/iconos/bars-solid.svg">
+        <img class="header header__bars" src="assets/iconos/bars-solid.svg" (click)="showMenu = !showMenu">
         <img class="header header__logo" src="assets/logo.svg">
         <div class="header header__icons">
             <img class="header header__icon" src="assets/iconos/search-solid.svg">
             <img class="header header__icon" src="assets/iconos/user-solid.svg">
             <img class="header header__icon" src="assets/iconos/shopping-cart-solid.svg">
         </div>
+
+        <div class="header header__menu" [ngClass]="{'header__menu--open': showMenu}">
+            <app-menu [showMenu]="showMenu" (onMenu)="showMenu = $event"></app-menu>
+        </div>
+
     </div>
     <div class="header header__links">
         <a class="header header__link header__link--bold" href="!#">sale</a>

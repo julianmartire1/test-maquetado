@@ -1,0 +1,33 @@
+.accordion {
+    cursor: pointer;
+    &__subtitle {
+        background-color: #e4e8ee;
+        color: #030b1c;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 5px 16px;
+        margin: 5px 0;
+
+        span {
+            float: right;
+            font-size: 16px;
+        }
+    }
+    &__item {
+        color: #030b1c;
+        font-size: 16px;
+        padding: 3px 16px;
+        cursor: pointer;
+        &:hover {
+            background-color: #e4e8ee7d;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &--open {
+            display: block;
+        }
+    }
+}

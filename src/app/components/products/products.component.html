@@ -1,8 +1,8 @@
 <div class="products products__layout">
     <h1 class="products products__type-product">Zapatillas</h1>
     <div class="products products__product" *ngFor="let item of products">
-        <img class="products products__img" [src]="item.img">
-        <div class="products products__name">{{item.name}}</div>
+        <img class="products products__img" [src]="item.image">
+        <div class="products products__name">{{item.title}}</div>
         <div class="products products__price">${{item.price}}</div>
     </div>
 </div>

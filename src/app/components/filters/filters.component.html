@@ -1,24 +1,5 @@
 <div class="filters">
     <h1 class="filters filters__title">Filtrar</h1>
 
-    <h3 class="filters filters__subtitle">Categoría</h3>
-    <div class="filters filters__item">Zapatillas</div>
-    <div class="filters filters__item">Zapatos</div>
-    <div class="filters filters__item">Botas</div>
-    <div class="filters filters__item">Sandalias</div>
-    <div class="filters filters__item">Pantuflas</div>
-
-    <h3 class="filters filters__subtitle">Talle</h3>
-    <div class="filters filters__item">36</div>
-    <div class="filters filters__item">38</div>
-    <div class="filters filters__item">40</div>
-    <div class="filters filters__item">42</div>
-    <div class="filters filters__item">44</div>
-
-    <h3 class="filters filters__subtitle">Color</h3>
-    <div class="filters filters__item">Amarillo</div>
-    <div class="filters filters__item">Negro</div>
-    <div class="filters filters__item">Verde</div>
-    <div class="filters filters__item">Azul</div>
-    <div class="filters filters__item">Blanco</div>
+    <app-accordion *ngFor="let items of filters" [items]="items"></app-accordion>
 </div>
